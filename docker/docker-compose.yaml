@@ -19,7 +19,9 @@ services:
         - ./mock/vpn/ccd:/etc/openvpn/server/ccd
         - ./mock/vpn/ca.crt:/etc/openvpn/server/ca.crt
         - ./mock/vpn/ldapca.crt:/etc/ldap/ssl/cacert.crt
+    # vs--- possible fix for duplicate entries - cooment out line below
         - ./mock/vpn/ca.crt:/etc/ldap/ssl/cacert.crt
+    # ---vs
         - ./mock/vpn/vpn.key:/etc/openvpn/server/server.key
         - ./mock/vpn/vpn.crt:/etc/openvpn/server/server.crt
         - ./mock/vpn/dh.pem:/etc/openvpn/server/dh.pem
